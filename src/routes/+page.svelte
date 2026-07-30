@@ -1,20 +1,29 @@
 <script lang="ts">
 	const links = [
 		{
+			title: 'View Ionic Components Demo',
+			url: '/components',
+			external: false
+		},
+		{
 			title: 'Visit Ionic Showcase app with sourceviewer',
-			url: 'https://ionic-svelte.firebaseapp.com/'
+			url: 'https://ionic-svelte.firebaseapp.com/',
+			external: true
 		},
 		{
 			title: 'Visit Ionic component docs',
-			url: 'https://ionicframework.com/docs/components'
+			url: 'https://ionicframework.com/docs/components',
+			external: true
 		},
 		{
 			title: 'Visit Svelte Kit docs',
-			url: 'https://kit.svelte.dev/docs/introduction'
+			url: 'https://kit.svelte.dev/docs/introduction',
+			external: true
 		},
 		{
 			title: 'Visit Svelte docs',
-			url: 'https://svelte.dev/docs'
+			url: 'https://svelte.dev/docs',
+			external: true
 		}
 	];
 </script>
@@ -34,7 +43,14 @@
 		{#each links as link}
 			<ion-item>
 				<ion-label>{link.title}</ion-label>
-				<ion-button href={link.url} target="_new" fill="outline" slot="end">View</ion-button>
+				<ion-button 
+					href={link.url} 
+					target={link.external ? "_new" : undefined} 
+					fill="outline" 
+					slot="end"
+				>
+					View
+				</ion-button>
 			</ion-item>
 		{/each}
 	</ion-list>
