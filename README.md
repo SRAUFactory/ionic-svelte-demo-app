@@ -14,6 +14,9 @@ Webフロントエンド技術 (HTML/CSS/JS) とSvelteのリアクティビテ�
 
 - **Node.js**: 最新のLTS推奨
 - **パッケージマネージャー**: `pnpm` を必ず使用してください (モジュール解決のエラーを防ぐため、プロジェクトルートの `.npmrc` に `shamefully-hoist=true` が設定されています)
+- **ネイティブ開発環境 (エミュレータ・実機デバッグ時)**:
+  - **iOSデバッグ**: Xcode (macOS環境)
+  - **Androidデバッグ**: Android Studio
 
 ## 環境構築・起動手順
 
@@ -32,7 +35,15 @@ pnpm dev
 
 ### 3. iOS / Android エミュレータでのデバッグ
 
-Capacitorを経由してネイティブ環境でデバッグを行う場合は、各種IDE（Xcode / Android Studio）を利用するのが正攻法です。
+#### 方法 A: VS Code / Antigravity IDE 拡張機能の利用（推奨）
+VS Code や Antigravity IDE をお使いの場合は、Ionic公式の **Ionic (Web Native)** 拡張機能の利用を推奨します。
+
+1. 拡張機能マーケットプレイスで `Web Native` または `Ionic` を検索してインストールします。
+2. サイドバーのアクティビティバーに追加された Ionic アイコンを開きます。
+3. **Run** / **Debug** セクションからターゲット（iOS Simulator, Android Emulator, 実機等）を選択し、ワンクリックでビルドおよびデバッグ起動が可能です。
+
+#### 方法 B: CLI ＋ Xcode / Android Studio を使う方法
+Capacitor CLI を経由してネイティブIDEを起動してデバッグを行う標準手順です。
 
 ```bash
 # 事前にWebアセットのビルドを実施
