@@ -62,7 +62,8 @@
 			<ion-card-content>
 				<ion-list>
 					<ion-item>
-						<ion-input label="Name" label-placement="stacked" placeholder="Enter your name"></ion-input>
+						<ion-input label="Name" label-placement="stacked" placeholder="Enter your name"
+						></ion-input>
 					</ion-item>
 					<ion-item>
 						<ion-select label="Favorite Fruit" label-placement="stacked" placeholder="Select one">

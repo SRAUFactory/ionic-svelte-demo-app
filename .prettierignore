@@ -2,3 +2,10 @@
 package-lock.json
 pnpm-lock.yaml
 yarn.lock
+
+# Native build outputs
+ios/
+android/
+build/
+.svelte-kit/
+dist/

@@ -51,10 +51,10 @@
 				{#each links as link}
 					<ion-item>
 						<ion-label>{link.title}</ion-label>
-						<ion-button 
-							href={link.url} 
-							target={link.external ? "_new" : undefined} 
-							fill="outline" 
+						<ion-button
+							href={link.url}
+							target={link.external ? '_new' : undefined}
+							fill="outline"
 							slot="end"
 						>
 							View
